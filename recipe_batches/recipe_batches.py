@@ -3,7 +3,10 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+    batches_per = []
+    for item in recipe:
+        batches_per.append(int(ingredients.get(item, 0)/recipe[item]))
+    return min(batches_per)
 
 
 if __name__ == '__main__':
